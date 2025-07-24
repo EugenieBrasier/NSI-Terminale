@@ -1,0 +1,271 @@
+@keyframes ok {
+  0%   { background:green; }
+  25%  { background:green; }
+  26%  { background:blue;  }
+  50%  { background:blue;  }
+  51%  { background:green; }
+  75%  { background:green; }
+  76%  { background:blue;  }
+  100%  { background:blue;  }
+}
+
+@keyframes nok {
+  0%   { background:orange; }
+  25%  { background:orange; }
+  26%  { background:blue;  }
+  50%  { background:blue;  }
+  51%  { background:orange; }
+  75%  { background:orange; }
+  76%  { background:blue;  }
+  100%  { background:blue;  }
+}
+
+html{
+	width:100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	width:100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	font-size: 1.3em;
+}
+
+div#haut{
+	width:100%;
+	height: 50%;
+	position: relative;
+	background: blue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+img{
+	position: relative;
+	height: 70%;
+}
+
+div#bas{
+	width:100%;
+	height: 50%;
+	background: darkblue;
+}
+
+div#hover{
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: top;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background: rgba(0, 0, 0, 0.75);
+}
+
+div#message{
+	width: 50%;
+	height: 20%;
+	margin: 50px;
+	border: solid 1px white;
+	background: orange;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5em;
+}
+
+button{
+	width: 100px;
+	height: 100px;
+	margin: 50px;
+	box-shadow: 0px 0px 20px white;
+	background: rgba(150, 150, 150, 1);
+	border: solid 2px white;
+	border-radius: 100%;
+	font-family: "Arial";
+	font-size: 2em;
+	cursor: pointer;
+}
+
+div#jauge{
+	width: 50px;
+	height: auto;
+	margin-left: 20px;
+	position: absolute;
+	left: 0px;
+	background: red;
+
+}
+
+div.bitcoin{
+	height: 6%;
+	background: white;
+	border: solid 2px black;
+	text-align: center;
+	font-weight: bold;
+}	
+
+div#niveau0{
+	border: solid 5px white;
+	background: black;
+	color:white;
+}
+
+div.palier{
+	height: 6%;
+	background: orange;
+	border: solid 2px black;
+	text-align: center;
+	font-weight: bold;
+}
+
+button:hover{
+	background: rgba(200, 200, 200, 1);
+}
+
+button:active{
+	background: rgba(255, 255, 255, 1);
+}
+
+div.ligne{
+	width:10%;
+	height: 3px;
+	background: white;
+}
+
+div.ligne_droite{
+	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0) 100%);;
+}
+
+div.ligne_gauche{
+	background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 100%);
+}
+
+div#question{
+	width: 100%;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color:white;
+}
+
+div#question_centre{
+	width: 60%;
+	height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: blue;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	border-top: solid 2px white;
+	border-bottom: solid 2px white;
+}
+
+div#question_gauche, div.reponse_gauche{
+	width: 10%;
+	height: 80%;
+	position: relative;
+}
+
+div#question_gauche > div.triangle1, div.reponse_gauche > div.triangle1{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	clip-path: polygon(100% 0%, 100% 100%, 0% calc(50% + 2px), 0% calc(50% - 2px));
+	background-color: white;
+}
+
+div#question_gauche > div.triangle2, div.reponse_gauche > div.triangle2{
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+	align-self: right;
+	clip-path: polygon(100% calc(0% + 2px), 100% calc(100% - 2px), calc(0% + 2px) 50%);
+	background-color: blue;
+}
+
+div#question_droite, div.reponse_droite{
+	width: 10%;
+	height: 80%;
+	position: relative;
+}
+
+div#question_droite > div.triangle1, div.reponse_droite > div.triangle1{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 100% calc(50% + 2px), 100% calc(50% - 2px));
+	background-color: white;
+}
+
+div#question_droite > div.triangle2, div.reponse_droite > div.triangle2{
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+	align-self: right;
+	clip-path: polygon(0% calc(0% + 2px), 0% calc(100% - 2px), 100% 50%);
+	background-color: blue;
+}
+
+div#question{
+	width: 100%;
+	height: 40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div#reponses{
+	width:100%;
+	height: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+div.reponse{
+	width: 50%;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	color:white;
+}
+
+div.B, div.D{
+	justify-content: left;
+}
+
+div.A, div.C{
+	justify-content: right;
+}
+
+div.reponse_centre{
+	width: 70%;
+	height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: blue;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	border-top: solid 2px white;
+	border-bottom: solid 2px white;
+}
